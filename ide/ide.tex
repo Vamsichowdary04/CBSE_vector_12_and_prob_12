@@ -1,0 +1,201 @@
+\def\mytitle{IDE ASSIGNMENT}
+\def\myauthor{BOLLA VAMSIKRISHNA}
+\def\contact{bollavamsi04@gmail.com}
+\def\mymodule{Future Wireless Communications (FWC)}
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+
+\usepackage{enumitem}
+%\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{setspace}
+\usepackage{gensymb}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage[hyphens,spaces,obeyspaces]{url}
+\usepackage[cmex10]{amsmath}
+%\usepackage{mathtools}
+%\singlespacing
+%\usepackage{amsthm}
+%\usepackage{mathrsfs}
+%\usepackage{txfonts}
+%\usepackage{stfloats}
+%\usepackage{cite}
+%\usepackage{cases}
+%\usepackage{subfig}
+%\usepackage{longtable}
+%\usepackage{multirow}
+%\twocolumn
+\usepackage{graphicx}
+%\graphicspath{{./images/}}
+%\usepackage[colorlinks,linkcolor={black},citecolor={blue!80!black},urlcolor={blue!80!black}]{hyperref}
+%\usepackage[parfill]{parskip}
+%\usepackage{lmodern}
+%\usepackage{tikz}
+%\usepackage{circuitikz}
+%\usepackage{karnaugh-map}
+%\usepackage{pgf}
+%\usepackage[hyphenbreaks]{breakurl}
+
+\usepackage{tabularx}
+%\usetikzlibrary{calc}
+
+\renewcommand*\familydefault{\sfdefault}
+\usepackage{watermark}
+\usepackage{lipsum}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{titlesec}
+\DeclareMathOperator*{\Res}{Res}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+\titlespacing{\subsection}{1pt}{\parskip}{3pt}
+\titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
+\titlespacing{\paragraph}{0pt}{\parskip}{\parskip}
+\newcommand{\figuremacro}[5]{
+    \begin{figure}[#1]
+        \centering
+        \includegraphics[width=#5\columnwidth]{#2}
+        \caption[#3]{\textbf{#3}#4}
+        \label{fig:#2}
+    \end{figure}
+}
+
+\lstset{
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+
+%\thiswatermark{\centering \put(400,-128.0){\includegraphics[scale=0.3]{logo}} }
+\title{\mytitle}
+\author{\myauthor\hspace{1em}\\\contact\\IITH\hspace{0.5em}-\hspace{0.6em}\mymodule}
+\date{20-12-2022}
+\def\inputGnumericTable{}                                 %%
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+ \begin{document}
+%
+
+%\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}{Definition}[section]
+%\newtheorem{algorithm}{Algorithm}[section]
+%\newtheorem{cor}{Corollary}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+
+\vspace{3cm}
+\maketitle
+\tableofcontents
+  \section{QUESTION}
+     verify the correct operation of a divide-by-5 counter implemented using a 7474 IC, where the binary count is displayed using seven segment display.\\
+
+     \section{COMPONENTS}
+     \begin{tabularx}{0.46\textwidth} { 
+  | >{\centering\arraybackslash}X 
+  | >{\centering\arraybackslash}X 
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X | }
+\hline
+\textbf{Component}& \textbf{Values} & \textbf{Quantity}\\
+\hline
+Arduino & UNO & 1 \\  
+\hline
+JumperWires & M-F & 30 \\ 
+\hline
+seven segment &common Anode &1\\
+\hline
+Breadboard & & 1\\
+\hline
+Resistors &220ohms &1\\
+\hline
+IC & 7474 & 2\\
+\hline
+IC & 7447 & 1\\
+\hline
+\end{tabularx}
+
+ \begin{center}
+Figure.Components
+ \end{center}
+
+\section{CIRCUIT DIAGRAM}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{figs/div5 circuit.jpg}
+\caption{Divide by 5 counter}
+\label{fig:div5 circuit.jpg}
+\end{figure}
+
+\section{TRUTH TABLE}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{figs/ide truth table.jpg}
+\caption{Truth table}
+\label{fig:ide truth table.jpg}
+\end{figure}
+
+\subsection{BOOLEAN EQUATION}
+From the circuit diagram we can conclude:
+\begin{align}
+	D0 &=\overline{Q1 + Q2}\\
+	D1 &= Q0\\
+	D2 &= Q1
+\end{align}
+
+\section{HARDWARE}
+\begin{enumerate}
+\item Make the connections between the seven segment display and the 7447 IC as shown below.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.4\textwidth]{figs/seven seg.jpg}
+		\caption{seven segment connections}
+		\label{fig:seven seg.jpg}
+	\end{figure}
+\item connect the Arduino,7447 and the two 7474 ICs according to below table.
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.4\textwidth]{figs/connect.jpg}
+		\caption{Connections}
+		\label{fig:connect.jpg}
+	\end{figure}
+
+
+\end{enumerate}
+\section{SEVEN SEGMENT OUTPUT}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{figs/connection.jpg}
+\caption{Connections}
+\label{fig:connection.jpg}
+\end{figure}
+
+    \section{CONCLUSION}
+    Hence we have implemented the divide by 5 counter digital circuit.Execute the circuit using below code.
+    \begin{tabularx}{0.46\textwidth} { 
+  | >{\centering\arraybackslash}X |}
+  \hline
+  https://github.com/Vamsichowdary04/CBSE\\\_vector\_12\_and\_prob\_12/blob/main/ide\\/idepfoo.cpp\\
+  \hline
+\end{tabularx}
+
+
+ \bibliographystyle{ieeetr}
+\end{document}
