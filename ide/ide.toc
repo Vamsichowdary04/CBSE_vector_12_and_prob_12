@@ -1,8 +1,0 @@
-\contentsline {section}{\numberline {1}QUESTION}{1}{}%
-\contentsline {section}{\numberline {2}COMPONENTS}{1}{}%
-\contentsline {section}{\numberline {3}CIRCUIT DIAGRAM}{1}{}%
-\contentsline {section}{\numberline {4}TRUTH TABLE}{1}{}%
-\contentsline {subsection}{\numberline {4.1}BOOLEAN EQUATION}{1}{}%
-\contentsline {section}{\numberline {5}HARDWARE}{1}{}%
-\contentsline {section}{\numberline {6}SEVEN SEGMENT OUTPUT}{2}{}%
-\contentsline {section}{\numberline {7}CONCLUSION}{2}{}%
