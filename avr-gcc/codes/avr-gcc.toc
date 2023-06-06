@@ -1,0 +1,7 @@
+\contentsline {section}{\numberline {I}QUESTION}{1}{}%
+\contentsline {section}{\numberline {II}CIRCUIT DIAGRAM}{1}{}%
+\contentsline {section}{\numberline {III}COMPONENTS}{1}{}%
+\contentsline {section}{\numberline {IV}TRUTH TABLE}{1}{}%
+\contentsline {subsection}{\numberline {\mbox {IV-A}}LOGIC}{1}{}%
+\contentsline {section}{\numberline {V}PROCEDURE}{2}{}%
+\contentsline {section}{\numberline {VI}CONCLUSION}{2}{}%
