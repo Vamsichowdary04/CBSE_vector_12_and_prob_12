@@ -1,9 +1,0 @@
-\contentsline {section}{\numberline {I}QUESTION}{1}{}%
-\contentsline {section}{\numberline {II}COMPONENTS}{1}{}%
-\contentsline {section}{\numberline {III}CIRCUIT DIAGRAM}{1}{}%
-\contentsline {section}{\numberline {IV}PROCEDURE}{1}{}%
-\contentsline {section}{\numberline {V}TRUTH TABLE}{1}{}%
-\contentsline {subsection}{\numberline {\mbox {V-A}}LOGIC}{1}{}%
-\contentsline {section}{\numberline {VI}LED OUTPUT}{2}{}%
-\contentsline {section}{\numberline {VII}OSCILLOSCOPE VISUALIZATION}{2}{}%
-\contentsline {section}{\numberline {VIII}CONCLUSION}{2}{}%
