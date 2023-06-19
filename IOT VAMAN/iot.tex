@@ -1,0 +1,208 @@
+\def\mytitle{IOT ASSIGMNMENT}
+\def\myauthor{BOLLA VAMSIKRISHNA}
+\def\contact{bollavamsi04@gmail.com}
+\def\mymodule{Future Wireless Communications (FWC)}
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+
+\usepackage{setspace}
+\usepackage{gensymb}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage[hyphens,spaces,obeyspaces]{url}
+\usepackage[cmex10]{amsmath}
+\usepackage{mathtools}
+\singlespacing
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{txfonts}
+\usepackage{stfloats}
+\usepackage{cite}
+\usepackage{cases}
+\usepackage{subfig}
+\usepackage{longtable}
+\usepackage{multirow}
+\twocolumn
+
+
+\usepackage{graphicx}
+\graphicspath{{./images/}}
+\usepackage[colorlinks,linkcolor={black},citecolor={blue!80!black},urlcolor={blue!80!black}]{hyperref}
+\usepackage[parfill]{parskip}
+\usepackage{lmodern}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usepackage{karnaugh-map}
+\usepackage{pgf}
+\usepackage[hyphenbreaks]{breakurl}
+
+\usepackage{tabularx}
+\usetikzlibrary{calc}
+
+\renewcommand*\familydefault{\sfdefault}
+\usepackage{watermark}
+\usepackage{lipsum}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{float}
+\usepackage{titlesec}
+\DeclareMathOperator*{\Res}{Res}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+\renewcommand\thesubsubsection{\thesubsection.\arabic{subsubsection}}
+
+\renewcommand\thesectiondis{\arabic{section}}
+\renewcommand\thesubsectiondis{\thesectiondis.\arabic{subsection}}
+\renewcommand\thesubsubsectiondis{\thesubsectiondis.\arabic{subsubsection}}
+\titlespacing{\subsection}{1pt}{\parskip}{3pt}
+\titlespacing{\subsubsection}{0pt}{\parskip}{-\parskip}
+\titlespacing{\paragraph}{0pt}{\parskip}{\parskip}
+\newcommand{\figuremacro}[5]{
+    \begin{figure}[#1]
+        \centering
+        \includegraphics[width=#5\columnwidth]{#2}
+        \caption[#3]{\textbf{#3}#4}
+        \label{fig:#2}
+    \end{figure}
+}
+
+\lstset{
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+
+%\thiswatermark{\centering \put(400,-128.0){\includegraphics[scale=0.3]{logo}} }
+\title{\mytitle}
+\author{\myauthor\hspace{1em}\\\contact\\IITH\hspace{0.5em}-\hspace{0.6em}\mymodule}
+\date{20-12-2022}
+\def\inputGnumericTable{}                                 %%
+\lstset{
+%language=C,
+frame=single, 
+breaklines=true,
+columns=fullflexible
+}
+ \begin{document}
+%
+
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}{Definition}[section]
+%\newtheorem{algorithm}{Algorithm}[section]
+%\newtheorem{cor}{Corollary}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+
+\vspace{3cm}
+\maketitle
+\tableofcontents
+  \section{QUESTION}
+     An 8085 microprocessor acesses two memory locations $(2001H)$ and $(2002H)$, that contains $8$-bit numbers $98H$ and $B1H$ , respectively. the following program is executed:\\
+     LXI H,$2001H$\\
+     MVI A,$21H$\\
+     INX H \\
+     ADD M \\
+     INX H \\
+     MOV M,A \\
+     HLT \\
+     At the end of this program ,the memory location $2003H$ contains the number in decimal(base $10$ ) form\\
+     \section{COMPONENTS}
+     \begin{tabularx}{0.46\textwidth} { 
+  | >{\centering\arraybackslash}X 
+  | >{\centering\arraybackslash}X 
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X | }
+\hline
+\textbf{Component}& \textbf{Values} & \textbf{Quantity}\\
+\hline
+Vaman & LC & 1 \\  
+\hline
+JumperWires & M-F & 20 \\ 
+\hline
+Breadboard & &1 \\
+\hline
+LCD & &1\\
+\hline
+Resistor & 220ohms & 2 \\
+\hline
+\end{tabularx}
+\section{LCD CONNECTIONS}
+
+ \begin{figure}[H]
+\centering
+\includegraphics[width=\columnwidth]{figs/lcd1.jpg}
+\caption{lcd1}
+\label{fig:lcd1.jpg}
+\end{figure}
+     
+
+
+
+
+
+\section{IMPLEMENTATION}
+  \begin{tabularx}{0.4\textwidth} { 
+  | >{\centering\arraybackslash}X 
+  | >{\centering\arraybackslash}X  | }
+
+
+\hline
+\textbf{Vaman PIN} & \textbf{lcd } \\ 
+%\hline
+%GND & 1 \\
+%\hline
+%5V & 2 \\
+%\hline
+%GND & 3 \
+\hline
+GPIO19 & 4 \\
+%\hline
+%GND & 5 \\
+\hline
+GPIO23 & 6\\
+\hline
+GPIO18 & 11\\
+\hline
+GPIO17 & 12 \\
+\hline
+GPIO16 & 13 \\
+\hline
+GPIO15 & 14 \\
+%\hline
+%5V & 15 \\
+%\hline
+%GND & 16 \\
+\hline
+\end{tabularx}
+
+\begin{center}
+    Connections
+\end{center}
+\paragraph{PROCEDURE}
+    
+    1. Connect the circuit as per the above table.\\
+    2. connect the lcd to vaman\\
+\\ \begin{tabularx}{0.45\textwidth} { 
+  | >{\centering\arraybackslash}X |}
+  \hline
+        https://github.com/Vamsichowdary04/Future\\\-Wireless\-Communication-FWC\\\-/blob/main/IOTVAMAN/M210.cpp\\
+  \hline
+\end{tabularx}
+    \section{LCD OUTPUT}
+
+ \begin{figure}[H]
+\centering
+\includegraphics[width=\columnwidth]{figs/lcd2.jpg}
+\caption{vaman connection with lcd}
+\label{fig:lcd2.jpg}
+\end{figure}
+
+ \bibliographystyle{ieeetr}
+\end{document}
