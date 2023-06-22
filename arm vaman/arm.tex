@@ -1,0 +1,131 @@
+\def\mytitle{ARM ASSIGNMENT}
+\def\myauthor{BOLLA VAMSIKRISHNA}
+\def\contact{bollavamsi04@gmail.com}
+\def\mymodule{Future Wireless Communications (FWC)}
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{siunitx}
+\usepackage{inputenc}
+\usepackage{microtype}
+\usepackage{float}
+\usepackage{multirow}
+\twocolumn
+\usepackage{etoolbox}
+\tracingpatches
+
+\usepackage{amsmath}
+\usepackage{microtype}
+
+
+
+%\thiswatermark{\centering \put(400,-128.0){\includegraphics[scale=0.3]{logo}} }
+\title{\mytitle}
+\author{\myauthor\hspace{1em}\\\contact\\IITH\hspace{0.5em}-\hspace{0.6em}\mymodule}
+\date{20-12-2022}
+\def\inputGnumericTable{}                                 %%
+
+
+
+
+ 
+
+\begin{document}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}{Definition}[section]
+%\newtheorem{algorithm}{Algorithm}[section]
+%\newtheorem{cor}{Corollary}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\bibliographystyle{IEEEtran}
+
+\vspace{3cm}
+  \maketitle
+  \tableofcontents
+ 
+\section{QUESTION} 
+ In the circuit shown below, X and Y are digital inputs, and Z is a digital output. The equivalent circuit is a
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{figs/xor.jpg}
+\caption{CIRCUIT}
+\label{fig:xor.jpg}
+\end{figure}
+
+ 
+
+%\section{CIRCUIT DIAGRAM}
+%\begin{figure}[h!]
+%\centering
+%\includegraphics[width=0.35\textwidth]{logicblock.jpg}
+%\caption{Logic Block}
+%\label{fig:logicblock.jpg}
+%\end{figure}
+
+\section{COMPONENTS}
+  \begin{tabularx}{0.45\textwidth} { 
+ | >{\centering\arraybackslash}X 
+  | >{\centering\arraybackslash}X 
+  | >{\centering\arraybackslash}X
+  | >{\centering\arraybackslash}X | }
+\hline
+ \textbf{Component}& \textbf{Values} & \textbf{Quantity}\\
+\hline
+vaman & LC & 1 \\  
+\hline
+JumperWires& M-F & 10 \\ 
+\hline
+Breadboard &  & 1 \\
+\hline
+LED & &1 \\
+\hline
+Resistor &220ohms & 1\\
+\hline
+\end{tabularx}
+\begin{center}
+Table.COMPONENTS
+\end{center}
+
+\section{TRUTH TABLE}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{figs/xort.jpg}
+\caption{XOR GATE TRUTH TABLE}
+\label{fig:xort.png}
+\end{figure}
+
+\subsection{LOGIC}
+From the Logic Block  we get
+\begin{align}
+  Z&=\overline{X}.Y+X.\overline{Y}
+\end{align}
+Which is the logic of a XOR gate 
+
+\section{PROCEDURE}
+\begin{enumerate}
+\item Connect the anode (longer leg) of the LED to PYGMY pin 21 ( on the VAMAN board.
+\item Connect the cathode (shorter leg) of the LED to a current-limiting resistor (e.g., 220 ohms).
+\item Connect the other end of the current-limiting resistor to the GND (ground) pin on the Arduino Uno.
+\item Use PYGMY pin 22,23 on the VAMAN board to give the input manually.
+\end{enumerate}
+
+\section{CONCLUSION}
+Hence we have found the Z from  digital circuit given which represents xor gate.Execute the circuit using below code.
+
+   \begin{tabularx}{0.46\textwidth} { 
+  | >{\centering\arraybackslash}X |}
+  \hline
+https://github.com/Vamsichowdary04/Future\\\-Wireless\-Communication\-FWC\\-/blob/main/armvaman/src/main.c\\
+  \hline
+\end{tabularx}
+
+\bibliographystyle{ieeetr}
+\end{document}
