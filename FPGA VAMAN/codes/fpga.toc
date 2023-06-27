@@ -1,0 +1,6 @@
+\contentsline {section}{\numberline {I}QUESTION}{1}{}%
+\contentsline {section}{\numberline {II}COMPONENTS}{1}{}%
+\contentsline {section}{\numberline {III}TRUTH TABLE}{1}{}%
+\contentsline {subsection}{\numberline {\mbox {III-A}}LOGIC}{1}{}%
+\contentsline {section}{\numberline {IV}PROCEDURE}{1}{}%
+\contentsline {section}{\numberline {V}CONCLUSION}{1}{}%
