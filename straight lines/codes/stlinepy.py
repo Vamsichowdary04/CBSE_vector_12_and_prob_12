@@ -1,8 +1,8 @@
 import numpy as np
-import mpmath as mp
+import matplotlib.pyplot as plt
 import math as ma
 import matplotlib.pyplot as plt
-from numpy import linalg as LA
+from numpy import linalg as LA 
 
 def slope(m):
     m1 = np.array([2, 1])  # direction vector of 1st line
@@ -10,18 +10,21 @@ def slope(m):
     cos_theta = np.dot(m1, m2) / (np.linalg.norm(m1) * np.linalg.norm(m2))
     return cos_theta
 
-
 m1 = 1/2  # slope of the 1st line
 theta = np.deg2rad(45)  # Angle
 
+# Calculate the slopes using numpy roots
+coeff = [3, -8, -3]  # Coefficients of the quadratic equation
+roots = np.roots(coeff)  # Calculate the roots
 
-m2_1 = (8 + np.sqrt(8 ** 2 - 4 * 3 * (-3))) / (2 * 3)  # slope of the 2nd line
-m2_2 = (8 - np.sqrt(8 ** 2 - 4 * 3 * (-3))) / (2 * 3)
+# Extract the real roots
+m2 = roots[np.isreal(roots)].real
+m2_1 = m2[0]
+m2_2 = m2[1]
 
 print("Slope of the first line: ", m1)  # results
 print("Slope of the second line (Case 1): ", m2_1)
 print("Slope of the second line (Case 2): ", m2_2)
-
 
 def line_dir_pt(m, P, k1, k2):
     length = 10
@@ -33,15 +36,14 @@ def line_dir_pt(m, P, k1, k2):
         x_AB[:, i] = temp1.T
     return x_AB
 
-
 # Input parameters
 P = np.array([3, 2])
-P1=np.array([3,0])
+P1 = np.array([0, -3/2])
 
 # Generating the lines
 k1 = -10
-k2 = 6
-x_m1P = line_dir_pt(np.array([1, m1]), P1, k1, k2)
+k2 = 10  # Adjusted range for Line 1
+x_m1P = line_dir_pt(np.array([1, m1]),P1 , k1, k2)
 x_m2_1P = line_dir_pt(np.array([1, m2_1]), P, k1, k2)
 x_m2_2P = line_dir_pt(np.array([1, m2_2]), P, k1, k2)
 
@@ -51,17 +53,11 @@ plt.plot(x_m2_1P[0, :], x_m2_1P[1, :], label='Line 2 (Case 1): 3x-y=7')
 plt.plot(x_m2_2P[0, :], x_m2_2P[1, :], label='Line 2 (Case 2): x+3y = 9')
 
 # Labeling the coordinates
-#Labeling the coordinates
 tri_coords = np.vstack((P,)).T
-plt.scatter(tri_coords[0,:], tri_coords[1,:])
+plt.scatter(tri_coords[0, :], tri_coords[1, :])
 vert_labels = ['P']
 for i, txt in enumerate(vert_labels):
-    plt.annotate(txt, # this is the text
-                 (tri_coords[0,i], tri_coords[1,i]), # this is the point to label
-                 textcoords="offset points", # how to position the text
-                 xytext=(0,10), # distance from text to points (x,y)
-                 ha='center') # horizontal alignment can be left, right or center
-
+    plt.annotate(txt, (tri_coords[0, i], tri_coords[1, i]), textcoords="offset points", xytext=(0, 10), ha='center')
 
 plt.xlabel('$x$')
 plt.ylabel('$y$')
